@@ -1,0 +1,975 @@
+/* Fonts */
+@font-face {
+    font-family: Gempire;
+    src: url(Fonts/Gempire-Regular.ttf);
+}
+
+@font-face {
+    font-family: Vision;
+    src: url(Fonts/Vision-Regular.ttf);
+}
+
+@font-face {
+    font-family: Modeka;
+    src: url(Fonts/Modeka.otf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(Fonts/Montserrat-Regular.ttf);
+}
+
+/*Core*/
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Modeka, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #272822;
+    color: #cdc0b0;
+}
+
+/*Preloader*/
+
+#preLoaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preLoader1, #preLoader2 {
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    z-index: 3;
+}
+
+#preLoader2 {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+#preLoader1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+#flamePreloader {
+    position: absolute;
+    top: 25%;
+    z-index: 4;
+    width: 250px;
+}
+
+.counter {
+    font-size: 3em;
+    color: white;
+    position: absolute;
+    top: 90%;
+    z-index: 4;
+}
+
+/* Text headers + Titles on main page */
+h1 {
+    margin: 0;
+    font-size: 6em;
+    color: black;
+    font-family: Vision;
+    text-shadow: 2px 2px black;
+}
+
+h3 {
+    display: inline-block;
+    width: 50%;
+    font-size: 2em;
+}
+
+#titleColour1, #titleColour2, #titleColour3, #titleColour4 {
+    font-family: Gempire;
+    font-size: 95%;
+}
+
+/*Navbar + Header*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    padding-right: 1em;
+}
+
+nav li {
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #cdc0b0;
+    transition: color 0.5s;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #f49a00;
+}
+
+.logo {
+    float: left;
+    margin-top: 1.5em;
+    transform: translateX(50%);
+}
+
+#flameLogo {
+    width: 65px;
+}
+
+#hamburger, #links {
+    width: 5%;
+    z-index: 2;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+}
+
+#hamburger::after {
+    content: "\2630";
+    font-size: 3em;
+    margin-top: 1em;
+    margin-right: 3em;
+    z-index: 2;
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+#hamburger:hover:after {
+    color: #f49a00;
+}
+
+#links {
+    font-size: 1.5em;
+}
+
+/*Main page center content*/
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transform: translateX(-2%);
+    height: 80%;
+}
+
+.title {
+    height: 1em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*View works toggle section*/
+.arrow::after {
+    display: inline-block;
+    content: "\2227";
+    font-size: 3em;
+    transform:rotate(180deg);
+    transition: color 0.5s;
+}
+
+.arrow:hover {
+    transform: translateY(10%);
+    color: #f49a00;
+    cursor: pointer;
+}
+
+.line {
+    width: 20%;
+    height: 3px;
+    color: black;
+    background-color: black;
+    position: absolute;
+    bottom: 13%;
+    border: none;
+}
+
+.worksToggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewWorks:hover {
+    color: #f49a00;
+    cursor: pointer;
+}
+
+/*Works gallery*/
+.worksContainer {
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    width: 65%;
+}
+
+/*Progress circles*/
+.progress {
+    border: 2px solid black;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.progress1 {
+    position: absolute;
+    top: -4%;
+    left: 45%; /*Change to 43% if adding 3rd gallery page*/
+}
+
+.progress2 {
+    position: absolute;
+    top: -4%;
+    right: 45%; /*Change to left 48% if adding 3rd gallery page*/
+}
+
+/*For the future*/
+/*.progress3 {
+    position: absolute;
+    top: -4%;
+    left: 53%;
+}*/
+
+/*Hiding styling*/
+.hide {
+    visibility: hidden;
+}
+
+.hideMain {
+    display: none;
+}
+
+/*Close gallery arrow*/
+.closeGallery {
+    position: relative;
+    right: -100%;
+    top: 0.5em;
+    z-index: 2;
+}
+
+.closeGallery::after {
+    transform: rotate(360deg);
+}
+
+.closeGallery:hover::after {
+    transform: translateY(-10%);
+}
+
+/*Gallery arrow navigation*/
+.rightBtn::after {
+    content: "\276F";
+    color: black;
+    font-size: 10em;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+.rightBtn:hover::after {
+    transform: translateX(5%);
+    color: #f49a00;
+}
+
+.leftBtn::after {
+    content: "\276E";
+    color: black;
+    font-size: 10em;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+.leftBtn:hover::after {
+    transform: translateX(-5%);
+    color: #f49a00;
+}
+
+.galPrev::after {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+}
+
+.galNext::after {
+    position: fixed;
+    top: 50%;
+    right: 10%;
+}
+
+/*Masonry effect*/
+.masonry {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 8px;
+    padding-top: 0.5em;
+    background-color: black;
+}
+
+.masonryItem {
+    flex: auto;
+    height: 250px;
+    min-width: 150px;
+    margin: 0 8px 8px 0;
+}
+
+.masonryItem:nth-child(4n+1){
+     /*width: 250px;*/
+     width: 25rem;
+}
+.masonryItem:nth-child(4n+2){
+     /*width: 325px;*/
+     width: 32.5rem;
+}
+.masonryItem:nth-child(4n+3){
+     /*width: 180px;*/
+     width: 18rem;
+}
+.masonryItem:nth-child(4n+4){
+     /*width: 380px;*/
+     width: 38rem;
+}
+
+.masonryImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.masonryItem:hover {
+    filter: grayscale(50%);
+}
+
+.imgCaption {
+    color: white;
+    position: relative;
+    top: -60%;
+    font-size: 2em;
+    text-shadow: 2px 2px black;
+}
+
+.galContainer1, .galContainer2, .galContainer3 { /*As is a block element needs to be brought up to fit inside gallery box.*/
+    position: absolute;
+    top: 2.5%;
+}
+
+/*Zoom images*/
+#zoomImg {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    top: 20%;
+    left: 20%;
+    z-index: 2;
+    background-color: black;
+    border-top: 1em solid black;
+    border-bottom: 1em solid black;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+#zoomContainer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.toggleDoubleZoom {
+    transform: scale(2.4);
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform .5s ease-out;
+}
+
+/*Cross for exiting zoom*/
+.cross::after {
+    content: "\2716";
+    font-size: 2em;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: color 0.5s;
+    padding: 5px;
+    text-shadow: 2px 2px black;
+}
+
+.cross:hover:after {
+    color: #f49a00;
+}
+
+.buyBtn {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    position: fixed;
+    bottom: 0%;
+    right: 1%;
+    transition: color 0.5s;
+    padding: 5px;
+    text-shadow: 2px 2px black;
+}
+
+.buyBtn:hover {
+    color: #f49a00;
+    cursor: pointer;
+}
+
+/* Footer*/
+footer {
+    margin-top: 3em;
+    margin-left: 1em;
+    text-align: center;
+}
+
+/* ABOUT PAGE */
+.portrait {
+    border-radius: 100%;
+    width: 30%;
+    border: 2px solid black;
+}
+
+#portraitContainer {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+#aboutName {
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+}
+
+#aboutSubTitle {
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-top: 0;
+    font-family: Montserrat-Regular;
+}
+
+.contentContainer {
+    margin: 1.5em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /*Needed for positioning the arrow buttons correctly inside the div.*/
+}
+
+.aboutBgImg {
+    background-image: url("Images/working.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 70rem;
+    opacity: 0.2;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.aboutPrev {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 999;
+}
+
+.aboutNext {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    z-index: 999;
+}
+
+.aboutPic {
+    width: 30%;
+    margin: 1em;
+    border: 2px solid black;
+}
+
+.aboutText {
+    width: 60%;
+    font-family: Montserrat-Regular;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 1em;
+    padding-bottom: 10px;
+    position: absolute;
+    text-shadow: 2px 2px black;
+}
+
+/*Second text*/
+.rightText {
+    border-bottom: 2px solid #f49a00;
+    border-right: 2px solid #f49a00;
+    padding-right: -10px;
+}
+
+/*First text*/
+.leftText {
+    border-bottom: 2px solid #f49a00;
+    border-left: 2px solid #f49a00;
+    padding-left: 10px;
+}
+
+/* CONTACT PAGE */
+.pageHeaderContainer {
+    text-align: center;
+    clear: left;
+}
+
+.pageHeader {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.pageHeader::first-letter {
+    color: #f49a00;
+}
+
+.infoText {
+    font-size: 1.3em;
+    padding-bottom: 2em;
+    font-family: Montserrat-Regular;
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+}
+
+input {
+    margin-bottom: 3em;
+    padding-bottom: 1em;
+    background-color: #cdc0b0;
+    font-size: 1em;
+    font-family: Montserrat-Regular;
+}
+
+textarea {
+    background-color: #cdc0b0;
+    font-size: 1em;
+    font-family: Montserrat-Regular;
+}
+
+input:focus, textarea:focus {
+    background-color: white;
+}
+
+
+#submitBtn {
+    padding: 1em 1.5em;
+    margin-top: 1.5em;
+    color: #cdc0b0;
+    background-color: black;
+    border: 2px solid #cdc0b0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+#submitBtn:hover {
+    background-color: #f49a00;
+    color: black;
+    border: 2px solid black;
+}
+
+.errorName, .errorEmail, .errorMessage {
+    color: red;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1024px) {
+    .leftBtn::after {
+        left: 7.5%;
+    }
+
+    .rightBtn::after {
+        right: 8%;
+    }
+
+    .progress1 {
+        left: 43%; /*Change if adding 3rd gallery page*/
+    }
+
+    .progress2 {
+        right: 43%; /*Change if adding 3rd gallery page*/
+    }
+
+    hr {
+        display: none;
+    }
+
+    h1 {
+        font-size: 4em; 
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    #links {
+        right: 7.5%;
+    }
+
+    .aboutNext {
+        right: 3%;
+    }
+
+    .aboutPrev {
+        left: 3%;
+    }
+
+    #aboutSubTitle {
+        width: 60%;
+    }
+
+    .portrait {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #hamburger {
+        right: 7%;
+    }
+
+    #links {
+        right: 11%;
+    }
+
+    .closeGallery {
+        left: 0;
+        top: -2%;
+    }
+
+    .progress1 {
+        left: 38%; /*Change if adding 3rd gallery page*/
+    }
+
+    .progress2 {
+        right: 38%; /*Change if adding 3rd gallery page*/
+    }
+
+    .leftBtn::after {
+        left: 4%;
+    }
+
+    .rightBtn::after {
+        right: 5%;
+    }
+
+    .portrait {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .titleContainer {
+        transform: translateX(-5%);
+    }
+
+    #aboutSubTitle {
+        width: 90%;
+    }
+
+    #hamburger {
+        right: 8%;
+    }
+
+    #links {
+        right: 12%;
+    }
+
+    .closeGallery {
+        top: -4%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #hamburger {
+        right: 8%;
+    }
+
+    #links {
+        right: 12%;
+    }
+
+    .closeGallery {
+        top: -2%;
+    }
+
+    .progress1, .progress2 {
+        top: -2%;
+    }
+
+    .rightBtn::after {
+        right: 1.5%;
+    }
+}
+
+/*Large styling change for small devices*/
+@media screen and (max-width: 599px) {
+/* Main page and header + footer */
+    #hamburger, #links {
+        width: 5%;
+        z-index: 2;
+        position: absolute;
+        right: 10%;
+        top: 4%;
+    }
+
+    #links {
+        font-size: 1.2em;
+        right: 100%;
+        top: 30%;
+    }
+
+    nav ul {
+        transform: translateX(-100%);
+    }
+
+    h1 {
+        font-size: 3.8em; 
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+        width: 60%;
+    }
+
+    .arrow {
+        font-size: 1em;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .titleContainer {
+        transform: translateX(-7%);
+    }
+
+    #flameLogo {
+        transform: translateY(-15%);
+        width: 50px;
+    }
+
+    .worksToggleContainer h3 {
+        width: 70%;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+
+    .worksContainer {
+        left: 35%;
+    }
+
+    .galContainer1, .galContainer2, .galContainer3 {
+        top: 23%;
+        left: 20%;
+    }
+
+    .leftBtn::after {
+        left: 17.5%;
+        font-size: 7em;
+    }
+
+    .rightBtn:after {
+        right: 18%;
+        font-size: 7em;
+    }
+
+    .progress1 {
+        top: 18%;
+        left: 58%; /*Change if adding 3rd gallery page*/
+    }
+
+    .progress2 {
+        top: 18%;
+        right: 14%; /*Change if adding 3rd gallery page*/
+    }
+
+    .imgCaption {
+        width: 80%;
+    }
+
+    .closeGallery {
+        top: 17%;
+        left: 20%;
+    }
+
+    #zoomImg {
+        top: 18%;
+        left: 1%;
+        width: 98%;
+    }
+
+    #flamePreloader {
+        top: 10%;
+    }
+
+    .counter {
+        top: 80%;
+    }
+
+    /* About page */
+
+    .pageHeader {
+        font-size: 3.5em;
+    }
+
+    #portraitContainer {
+        width: 90%;
+    }
+
+    #aboutName {
+        font-size: 2em;
+    }
+
+    #aboutSubTitle {
+        width: 100%;
+    }
+
+    .contentContainer {
+        display: block;
+    }
+
+    .aboutPic {
+        width: 90%;
+    }
+
+    .aboutText {
+        width: 75%;
+        position: absolute;
+        top: 0%;
+        left: 7%;
+    }
+
+    .aboutBgImg {
+        height: 57rem;
+    }
+
+    .aboutNext {
+        right: 1%;
+        font-size: 0.7em;
+    }
+
+    .aboutPrev {
+        left: 0.5%;
+        font-size: 0.7em;
+    }
+
+    .rightText {
+        top: 25%;
+        left: 9%;
+    }
+
+    .rightBtn::after, .leftBtn::after {
+        font-size: 7em;
+    }
+
+    /* Contact Page - Not currently in use */
+    .infoText {
+        font-size: 1.1em;
+    }
+
+    input {
+        margin-bottom: 1em;
+    }
+
+    #message {
+        width: 150%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .galContainer1, .galContainer2, .galContainer3 {
+        left: 17%;
+    }
+
+    .rightBtn:after {
+        right: 16%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .galContainer1, .galContainer2, .galContainer3 {
+        left: 13%;
+    }
+
+    .rightBtn:after {
+        right: 16%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .galContainer1, .galContainer2, .galContainer3 {
+        top: 23%;
+        left: 7%;
+    }
+
+    .leftBtn::after {
+        left: 8%;
+    }
+
+    .rightBtn:after {
+        right: 9%;
+    }
+
+    .progress1 {
+        top: 18%;
+        left: 55%; /*Change if adding 3rd gallery page*/
+    }
+
+    .progress2 {
+        top: 18%;
+        right: 12%; /*Change if adding 3rd gallery page*/
+    }
+}

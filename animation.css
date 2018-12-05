@@ -1,0 +1,141 @@
+.animateSlideDown {
+    animation-duration: 1.5s;
+    animation-name: slideDown;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateSlideUp {
+    animation-duration: 1.5s;
+    animation-name: slideUp;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateFadeOut {
+    animation-duration: 1s;
+    animation-name: fadeOut;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateFadeIn {
+    animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateSlideIn {
+    animation-duration: 1s;
+    animation-name: slideIn;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateZoomIn {
+    animation-duration: 1s;
+    animation-name: zoomIn;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateZoomOut {
+    animation-duration: 1s;
+    animation-name: zoomOut;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateCurtainOpen {
+    animation-duration: 1s;
+    animation-name: curtainOpen;
+    animation-fill-mode: forwards; /* Keeps animation in final frame */
+}
+
+.animateFlameBob {
+    animation-duration: 3s;
+    animation-name: flameBob;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-400%) translateX(-50%);
+    }
+    to {
+        transform: translateY(-90%) translateX(-50%);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(-90%) translateX(-50%);
+    }
+    to {
+        transform: translateY(-400%) translateX(-50%);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(20%);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0,0);
+    }
+    to {
+        transform: scale(1,1);
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1,1);
+    }
+    to {
+        transform: scale(0,0);
+    }
+}
+
+@keyframes curtainOpen {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+/* For preloader flame effects */
+@keyframes flameBob {
+    0% {
+        transform: translateY(0%);
+        transition: transform 3s;
+    }
+    50% {
+        transform: translateY(3%);
+        transition: transform 3s;
+    }
+    100% {
+        transform: translateY(0%);
+        transition: transform 3s;
+    }
+}
+

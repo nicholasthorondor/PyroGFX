@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Handcrafted Pyrographic Woodburning Designs">
+    <meta name="author" content="Nicholas Thorondor">
+    <title>PyroGFX | Pyrography Designs</title>
+    <link rel="icon" href="images/flame.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="pyrogfx.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
+    <link rel="stylesheet" type="text/css" href="Plugins/normalize.css">
+    <script src="Scripts/prefixfree.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Preloader effects -->
+    <div id="preLoaderContainer">
+        <img src="images/flame.png" id="flamePreloader" class="animateFlameBob" alt="A logo of an orange flame.">
+        <span class="counter"></span>
+        <div id="preLoader1"></div>
+        <div id="preLoader2"></div>
+    </div>
+   <!--  Header and navigation elements. -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/flame.png" id="flameLogo" alt="A logo of an orange flame.">
+            </div>
+            <div id="hamburger">
+                <div id="links" class="hide">
+                    <ul>
+                        <li><a href="about/">About</a></li>
+                        <li><a href="https://www.etsy.com/au/people/gdhtqnw4" target="_blank">Contact</a></li>
+                        <li><a href="https://www.etsy.com/au/shop/PyroGFX" target="_blank">Shop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Center title element. -->
+    <section class="titleContainer">
+        <div class="title hide">
+            <h1><span id="titleColour1">P</span><span id="titleColour2">y</span><span id="titleColour3">r</span><span id="titleColour4">o</span>GFX</h1>
+            <h2 id="subTitle" class="hide">Handcrafted Pyrograhpy Designs</h2>
+        </div>
+    </section>
+    <!-- View works elements. -->
+    <section class="worksToggleContainer">
+        <h3><span id="viewWorks">View Works</span></h3>
+        <hr class="line">
+        <span id="worksArrow" class="arrow"></span>
+    </section>
+    <!-- Animated gallery content -->
+        <div id="zoomContainer" class="hide"> <!-- Image zoom markup. -->
+             <div id="zoomImg" class="hide">
+                <div class="photo"></div>
+                 <span class="cross"></span>
+                 <a href="" target="_blank" class="buyBtn">Buy</a>
+             </div>
+        </div>
+        <span class="leftBtn galPrev hide"></span>
+        <span class="rightBtn galNext hide"></span>
+        <div class="worksContainer hideMain">
+            <span class="progress progress1"></span>
+            <span class="progress progress2"></span>
+            <!-- For the future
+            <span class="progress progress3"></span> -->
+            <span class="arrow closeGallery"></span>
+         <!-- 9 images per galContainer div. Fill up blanks with empty masonryItem div -->
+            <div class="galContainer1">
+            <div class="masonry">
+                <div class="masonryItem">
+                    <img src="images/img01.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/565757000/sugar-skull-key-organiser-o-day-of-the" alt="A photo of a pine key organiser with a sugar skull and floral design burnt into the wood.">
+                    <p class="imgCaption hide">Day of the Dead <br> Key Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img02.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/576192313/pokemon-key-organiser-1st-generation" alt="A photo of a pine key organiser with a Pokemon design burnt into the wood.">
+                    <p class="imgCaption hide">Pokemon <br> Key Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img03.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/579803327/mario-key-organiser-mario-yoshi-princess" alt="A photo of a pine key organiser with a Mario design burnt into the wood.">
+                    <p class="imgCaption hide">Mario <br> Key Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img04.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/579805099/sonic-the-hedgehog-key-organiser-sonic" alt="A photo of a pine key organiser with a Sonic the Hedgehog design burnt into the wood.">
+                    <p class="imgCaption hide">Sonic <br> Key Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img05.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/566226644/japanese-village-key-organiser" alt="A photo of a pine key organiser with a Japanese Village design burnt into the wood.">
+                    <p class="imgCaption hide">Japanese Village <br> Key Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img06.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/579804289/legend-of-zelda-key-organiser-link-and" alt="A photo of a pine key organiser with a Zelda design burnt into the wood.">
+                    <p class="imgCaption hide">Zelda <br> Key Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img07.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/604947847/desk-organizer-samurai-wood-burnt-design" alt="A photo of a pine desk organiser with a samurai geisha, dragon and katana design burnt into the wood.">
+                    <p class="imgCaption hide">Samurai <br> Desk Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img08.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/605196869/entertainment-organizer-koi-wood-burn" alt="A photo of a pine entertainment organiser with two koi fish designs burnt into the wood.">
+                    <p class="imgCaption hide">Koi <br> Entertainment Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img09.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/591648842/ipad-tablet-docking-stand-viking-wood" alt="A photo of a pine ipad holder with a viking helmet design burnt into the wood.">
+                    <p class="imgCaption hide">Viking <br> Tablet Stand</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="galContainer2 hide">
+            <div class="masonry">
+                <div class="masonryItem">
+                    <img src="images/img10.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/580269407/bb-8-star-wars-coaster-star-wars-episode" alt="A photo of a plywood coaster with a BB-8 design burnt into the wood.">
+                    <p class="imgCaption hide">BB-8 Coaster</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img11.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/566471022/porg-star-wars-coaster-star-wars-episode" alt="A photo of a plywood coaster with a Porg design burnt into the wood.">
+                    <p class="imgCaption hide">Porg Coaster</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img12.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/580269509/bb-9-star-wars-coaster-star-wars-episode" alt="A photo of a plywood coaster with a BB-9 design burnt into the wood.">
+                    <p class="imgCaption hide">BB-9 Coaster</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img13.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/566241272/mucha-jewellery-organiser-art-nouveau" alt="A photo of a pine jewellery organiser with a Mucha design burnt into the wood.">
+                    <p class="imgCaption hide">Mucha <br> Jewellery Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img14.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/580027645/floral-owl-jewellery-organiser-cherry" alt="A photo of a pine jewellery organiser with cherry blossom branches and two owls burnt into the wood.">
+                    <p class="imgCaption hide">Floral Owls <br> Jewellery Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img15.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/566242992/cute-chibi-animals-coaster-set-6-panda" alt="A photo of a plywood coaster set containing six coasters consisting of a fox, panda, owl, fennec fox, red panda and koala burnt into the wood.">
+                    <p class="imgCaption hide">Chibi Animals <br> Coaster Set</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img16.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/605432557/mobile-phone-docking-stand-triquetra" alt="A photo of a pine mobile phone holder with a triquetra design burnt into the wood.">
+                    <p class="imgCaption hide">Triquetra <br> Phone Stand</p>
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img17.jpg" class="masonryImg" data-src="https://www.etsy.com/au/listing/565479184/porg-key-organiser-star-wars-episode" alt="A photo of a pine key organiser with a Porg design burnt into the wood.">
+                    <p class="imgCaption hide">Porg <br> Key Organiser</p>
+                </div>
+                <div class="masonryItem">
+                    <!-- EMPTY ATM -->
+                </div>
+            </div>
+        </div>
+
+<!--         Used for the future -->
+<!--         <div class="galContainer3 hide">
+            <div class="masonry">
+                <div class="masonryItem">
+                    <img src="images/img.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img1.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img1.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img1.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img1.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img1.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img1.jpg" class="masonryImg">
+                </div>
+                <div class="masonryItem">
+                    <img src="images/img1.jpg" class="masonryImg">
+                </div>
+            </div>
+        </div> -->
+        </div>
+        <footer>
+            <span>&copy; PyroGFX | Site Design and Development &copy; Nicholas Thorondor</span>
+        </footer>
+    <!-- Scripts -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Scripts/script.js"></script>
+</body>
+</html>
